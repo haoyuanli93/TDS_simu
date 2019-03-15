@@ -11,6 +11,15 @@ er_square = er * er
 
 @numba.vectorize
 def thomson_scattering_intensity(intensity, d_square, angular_effect):
+    """
+    Given the intensty the distance square and the polarization factor, return the scattering
+    intensity of a thomson scattering scattering process.
+
+    :param intensity:
+    :param d_square:
+    :param angular_effect:
+    :return:
+    """
     return intensity * er_square / d_square * angular_effect
 
 
